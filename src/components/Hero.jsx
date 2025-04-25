@@ -14,13 +14,13 @@ const slides = [
     heading: "Driving Innovation for a",
     highlight: "Healthier Tomorrow",
     subtext: "Empowering pharmaceutical breakthroughs with technology and global excellence.",
-    img: img2,
+    img: img3,
   },
   {
     heading: "Transforming Lives with",
     highlight: "Advanced Medical Solutions",
     subtext: "Committed to delivering world-class healthcare products with global impact.",
-    img: img3,
+    img: img2,
   },
 ];
 
@@ -30,7 +30,7 @@ const HeroSlider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
