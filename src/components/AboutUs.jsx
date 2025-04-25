@@ -1,7 +1,10 @@
 import { Target, Eye, ShieldCheck } from 'lucide-react';
 import aboutImg from '../assets/about.webp'; // Use your actual image
+import { Helmet } from 'react-helmet-async'
 
 const AboutUs = () => {
+
+
   return (
     <section className="bg-white py-20 px-4 sm:px-8 md:px-16">
       <div className="max-w-7xl mx-auto">
@@ -20,7 +23,7 @@ const AboutUs = () => {
           {/* Image */}
           <img
             src={aboutImg}
-            alt="About Fila Fratello"
+            alt="Fila Fratello pharmaceutical manufacturing plant in Kanpur"
             className="w-full h-auto rounded-xl shadow-lg"
           />
 

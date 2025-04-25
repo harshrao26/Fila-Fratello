@@ -48,7 +48,7 @@ const FoundersSection = () => {
               <div className="flex flex-col items-center text-center">
                 <img
                   src={founder.image}
-                  alt={founder.name}
+                  alt="Founders of Fila Fratello Pharmaceutical - Sumit Kumar Yadav and Priyanshu Bhadouriya"
                   className="w-28 h-28 object-cover rounded-full border-4 border-white shadow-md mb-4"
                 />
                 <h4 className={`text-lg font-semibold ${founder.titleColor}`}>
