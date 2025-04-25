@@ -1,5 +1,5 @@
-import sampradaImg from '../assets/image.png'; // Add actual image path
-import basudeoImg from '../assets/image.png';   // Add actual image path
+import sampradaImg from '../assets/f1.webp'; // Add actual image path
+import basudeoImg from '../assets/f2.webp';   // Add actual image path
 
 const founders = [
   {
