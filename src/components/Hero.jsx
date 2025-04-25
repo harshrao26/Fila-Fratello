@@ -47,7 +47,7 @@ const HeroSlider = () => {
             style={{ backgroundImage: `url(${slide.img})` }}
           >
             <div className="bg-white/10 backdrop-blur-md p-6 sm:p-10 rounded-xl max-w-2xl sm:max-w-3xl">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight">
+              <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight">
                 {slide.heading}{" "}
                 <span className="bg-gradient-to-r from-blue-600 via-purple-500 to-red-400 bg-clip-text text-transparent font-bold">
                   {slide.highlight}

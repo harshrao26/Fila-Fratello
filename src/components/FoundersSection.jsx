@@ -26,7 +26,7 @@ const FoundersSection = () => {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 items-start">
         {/* Left Text */}
         <div className="w-full lg:w-1/3">
-          <h3 className="text-3xl md:text-5xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-purple-500 to-red-400 mb-2">
+          <h3 className="text-3xl capitalized md:text-5xl font-semibold  leading-snug text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-purple-500 to-red-400 mb-2">
             Our Founders
           </h3>
           {/* <h2 className="text-3xl md:text-5xl font-semibold  text-gray-800 mb-6">

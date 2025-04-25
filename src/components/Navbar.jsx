@@ -47,7 +47,7 @@ const Header = () => {
             {/* Close Button */}
             <button
               onClick={() => setShowModal(false)}
-              className="absolute top-3 right-4 text-gray-600 hover:text-red-600 text-2xl"
+              className="absolute top-3 right-4 text-gray-600 hover:text-red-600 text-4xl font-extralight"
             >
               ×
             </button>

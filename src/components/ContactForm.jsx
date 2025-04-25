@@ -41,7 +41,7 @@ const PharmaInquiryForm = () => {
         
         {/* Left Text Content */}
         <div>
-          <h2 className="text-5xl font-bold text-gray-800 mb-4 leading-tight">
+          <h2 className="text-3xl capitalized md:text-5xl font-semibold text-gray-800 mb-6 leading-snug">
             Pharmaceutical Inquiries & Business Connect
           </h2>
           <p className="text-gray-600 text-lg mb-6">

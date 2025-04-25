@@ -7,6 +7,8 @@ import Footer2 from './components/Footer2'
 import ContactForm from './components/ContactForm'
 import MapSection from './components/MapSection'
 import Whatsapp from './components/Whatsapp'
+import FutureVision from './components/FutureVision'
+import AboutUs from './components/AboutUs'
 
 const App = () => {
   return (
@@ -15,6 +17,8 @@ const App = () => {
       <Navbar />
       <Hero />
       <AboutSection />
+      <AboutUs />
+      <FutureVision />
       <FoundersSection />
       <MapSection />
       <ContactForm />
