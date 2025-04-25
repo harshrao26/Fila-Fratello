@@ -2,14 +2,7 @@ import sampradaImg from '../assets/f1.webp'; // Add actual image path
 import basudeoImg from '../assets/f2.webp';   // Add actual image path
 
 const founders = [
-  {
-    name: "Sumit Kumar Yadav",
-    title: "Director",
-    image: sampradaImg,
-    titleColor: "text-blue-700",
-    border: "border-red-300",
-    desc: `Sumit Kumar Yadav brings a dynamic vision to leadership, with a focus on innovation and operational excellence. His strategic mindset and strong execution skills have been instrumental in driving sustainable growth and expanding impact in new markets.`,
-  },
+
   {
     name: "Priyanshu Bhadouriya",
     title: "Director",
@@ -17,6 +10,14 @@ const founders = [
     titleColor: "text-blue-700",
     border: "border-blue-300",
     desc: `Priyanshu Bhadouriya combines deep business insight with a passion for building scalable systems. His commitment to integrity and forward-thinking has positioned him as a catalyst in the organization’s long-term strategic planning and execution.`,
+  },
+  {
+    name: "Sumit Kumar Yadav",
+    title: "Director",
+    image: sampradaImg,
+    titleColor: "text-blue-700",
+    border: "border-red-300",
+    desc: `Sumit Kumar Yadav brings a dynamic vision to leadership, with a focus on innovation and operational excellence. His strategic mindset and strong execution skills have been instrumental in driving sustainable growth and expanding impact in new markets.`,
   },
 ];
 
