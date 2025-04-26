@@ -1,8 +1,9 @@
 import sampradaImg from '../assets/f1.webp'; // Add actual image path
 import basudeoImg from '../assets/f2.webp';   // Add actual image path
-
+import f3 from '../assets/f3.webp';   // Add actual image path
+import f4 from '../assets/f4.webp';   // Add actual image path
+import f5 from '../assets/f5.webp';   // Add actual image path
 const founders = [
-
   {
     name: "Priyanshu Bhadouriya",
     title: "Director",
@@ -17,9 +18,34 @@ const founders = [
     image: sampradaImg,
     titleColor: "text-blue-700",
     border: "border-red-300",
-    desc: `Sumit Kumar Yadav brings a dynamic vision to leadership, with a focus on innovation and operational excellence. His strategic mindset and strong execution skills have been instrumental in driving sustainable growth and expanding impact in new markets.`,
+    desc: `Sumit Kumar Yadav brings a dynamic vision to leadership, focusing on innovation and operational excellence. His strategic mindset and strong execution skills have been instrumental in driving sustainable growth and expanding impact in new markets.`,
+  },
+  {
+    name: "Akhilesh Yadav",
+    title: "Central Marketing Head",
+    image: f4,
+    titleColor: "text-blue-700",
+    border: "border-blue-300",
+    desc: `Akhilesh Yadav leads the central marketing efforts with a creative and data-driven approach. His deep understanding of market trends and customer engagement strategies has significantly strengthened the organization's brand presence.`,
+  },
+  {
+    name: "Rajneesh Singh",
+    title: "Eastern Marketing Head",
+    image: f3,
+    titleColor: "text-blue-700",
+    border: "border-red-300",
+    desc: `Rajneesh Singh oversees marketing operations in the eastern region, bringing regional expertise and innovative campaigns. His dedication to localized strategies has greatly enhanced outreach and customer loyalty.`,
+  },
+  {
+    name: "Rahul Kumar",
+    title: "Product Management Team Head",
+    image: f5,
+    titleColor: "text-blue-700",
+    border: "border-blue-300",
+    desc: `Rahul Kumar drives the product management initiatives with a sharp focus on user needs and market demands. His leadership ensures that the product development process aligns perfectly with organizational goals and customer expectations.`,
   },
 ];
+
 
 const FoundersSection = () => {
   return (
@@ -51,10 +77,13 @@ const FoundersSection = () => {
                   alt="Founders of Fila Fratello Pharmaceutical - Sumit Kumar Yadav and Priyanshu Bhadouriya"
                   className="w-28 h-28 object-cover rounded-full border-4 border-white shadow-md mb-4"
                 />
-                <h4 className={`text-lg font-semibold ${founder.titleColor}`}>
+                <h4 className={`text-lg font-semibold capitalize ${founder.titleColor}`}>
                   {founder.name}
                 </h4>
-                <p className="text-sm text-gray-700 mt-4">{founder.desc}</p>
+                <h4 className={`text-sm font- capitalize `}>
+                  {founder.title}
+                </h4>
+                <p className="text-sm text-gray-700 mt-2">{founder.desc}</p>
               </div>
             </div>
           ))}

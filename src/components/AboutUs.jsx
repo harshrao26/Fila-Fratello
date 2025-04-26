@@ -1,6 +1,5 @@
 import { Target, Eye, ShieldCheck } from 'lucide-react';
 import aboutImg from '../assets/about.webp'; // Use your actual image
-import { Helmet } from 'react-helmet-async'
 
 const AboutUs = () => {
 
