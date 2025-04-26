@@ -29,7 +29,7 @@ const founders = [
     desc: `Akhilesh Yadav leads the central marketing efforts with a creative and data-driven approach. His deep understanding of market trends and customer engagement strategies has significantly strengthened the organization's brand presence.`,
   },
   {
-    name: "Rajneesh Singh",
+    name: "Rajnish ",
     title: "Eastern Marketing Head",
     image: f3,
     titleColor: "text-blue-700",
