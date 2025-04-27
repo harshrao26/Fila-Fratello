@@ -3,6 +3,7 @@ import basudeoImg from '../assets/f2.webp';   // Add actual image path
 import f3 from '../assets/f3.webp';   // Add actual image path
 import f4 from '../assets/f4.webp';   // Add actual image path
 import f5 from '../assets/f5.webp';   // Add actual image path
+import f6 from '../assets/f6.webp';   // Add actual image path
 const founders = [
   {
     name: "Priyanshu Bhadouriya",
@@ -29,7 +30,7 @@ const founders = [
     desc: `Akhilesh Yadav leads the central marketing efforts with a creative and data-driven approach. His deep understanding of market trends and customer engagement strategies has significantly strengthened the organization's brand presence.`,
   },
   {
-    name: "Rajnish ",
+    name: "Rajnish Singh",
     title: "Eastern Marketing Head",
     image: f3,
     titleColor: "text-blue-700",
@@ -43,6 +44,14 @@ const founders = [
     titleColor: "text-blue-700",
     border: "border-blue-300",
     desc: `Rahul Kumar drives the product management initiatives with a sharp focus on user needs and market demands. His leadership ensures that the product development process aligns perfectly with organizational goals and customer expectations.`,
+  },
+  {
+    name: "Manish sagar",
+    title: "Sales head",
+    image: f6,
+    titleColor: "text-blue-700",
+    border: "border-blue-300",
+    desc: `Manish Sagar leads the sales division with a results-driven approach, fostering strong client relationships and driving revenue growth. His expertise in strategic sales planning and team leadership has been crucial to expanding the company's market reach and customer satisfaction.`,
   },
 ];
 
