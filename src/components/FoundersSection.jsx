@@ -4,6 +4,8 @@ import f3 from '../assets/f3.webp';   // Add actual image path
 import f4 from '../assets/f4.webp';   // Add actual image path
 import f5 from '../assets/f5.webp';   // Add actual image path
 import f6 from '../assets/f6.webp';   // Add actual image path
+import f7 from '../assets/xxs.webp';   // Add actual image path
+
 const founders = [
   {
     name: "Priyanshu Bhadouriya",
@@ -53,6 +55,15 @@ const founders = [
     border: "border-blue-300",
     desc: `Manish Sagar leads the sales division with a results-driven approach, fostering strong client relationships and driving revenue growth. His expertise in strategic sales planning and team leadership has been crucial to expanding the company's market reach and customer satisfaction.`,
   },
+  {
+  name: "Aditya Pratap Singh",
+  title: "Business Development Manager",
+  image: f7,
+  titleColor: "text-blue-700",
+  border: "border-blue-300",
+  desc: `Aditya Pratap Singh spearheads business development with a focus on strategic partnerships, client acquisition, and market expansion. His deep understanding of customer needs and proactive approach has been instrumental in driving sustainable growth for the organization.`,
+}
+
 ];
 
 

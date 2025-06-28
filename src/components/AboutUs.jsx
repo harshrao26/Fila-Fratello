@@ -29,7 +29,7 @@ const AboutUs = () => {
           {/* Text Content */}
           <div>
             <p className="text-gray-700 mb-4 text-lg leading-relaxed">
-              <strong>Fila Fratello Pharmaceutical Private Limited</strong> is a progressive Indian pharma company driven by innovation, integrity, and impact. We specialize in high-quality generic and specialty medicines for domestic and international markets.
+              <strong>Fila Fratello Pharmaceutical Private Limited</strong> is a progressive Indian pharma company driven by innovation, integrity, and impact. We specialize in high-quality specialty medicines for domestic and international markets.
             </p>
             <p className="text-gray-600 mb-6">
               We are committed to reshaping the healthcare landscape with scalable solutions, regulatory excellence, and a dedication to affordable therapeutic access.
