@@ -6,7 +6,7 @@ const AboutSection = () => {
     <>
       {/* SEO Meta Tags for About Section */}
       <Helmet>
-        <title>About Fila Fratello | Leading Pharmaceutical Company in India</title>
+        <title>Fila Fratello | Leading Pharmaceutical Company in India</title>
         <meta
           name="description"
           content="Fila Fratello Pharmaceutical Pvt. Ltd. is redefining Indian healthcare through innovation, accessibility, and ethical pharma practices."
