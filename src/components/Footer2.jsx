@@ -74,18 +74,21 @@ const Footer = () => {
         </div>
       </footer>
 
-      <div className="flex justify-center items-center bg- gray-800 text-whi te py-4">
-        <p>
-          Designed & Developed by{" "}
-          <a
-            href="https://genforgestudio.com/"
-            className="text-blue-500 underline "
-            target="_blank"
-          >
-            Genforge Studio
-          </a>
-        </p>
-      </div>
+     <div className="flex justify-center items-center bg-g ray-900 text- gray-300 py-4 text-sm">
+  <p className="text-center">
+    Designed & Developed by{" "}
+    <a
+      href="https://genforgestudio.com/"
+      title="Web & App Development by GenForge Studio"
+      className="text-indigo-400 font-medium hover:underline hover:text-indigo-300 transition-colors"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      GenForge Studio
+    </a>
+    {" "}— Global Web & App Development Agency
+  </p>
+</div>
     </div>
   );
 };
