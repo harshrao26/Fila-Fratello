@@ -38,14 +38,14 @@ const founders = [
     border: "border-red-300",
     desc: `Rajneesh Singh oversees marketing operations in the eastern region, bringing regional expertise and innovative campaigns. His dedication to localized strategies has greatly enhanced outreach and customer loyalty.`,
   },
-  {
-    name: "Rahul Kumar",
-    title: "Product Management Team Head",
-    image: f5,
-    titleColor: "text-blue-700",
-    border: "border-blue-300",
-    desc: `Rahul Kumar drives the product management initiatives with a sharp focus on user needs and market demands. His leadership ensures that the product development process aligns perfectly with organizational goals and customer expectations.`,
-  },
+  // {
+  //   name: "Rahul Kumar",
+  //   title: "Product Management Team Head",
+  //   image: f5,
+  //   titleColor: "text-blue-700",
+  //   border: "border-blue-300",
+  //   desc: `Rahul Kumar drives the product management initiatives with a sharp focus on user needs and market demands. His leadership ensures that the product development process aligns perfectly with organizational goals and customer expectations.`,
+  // },
   
   {
   name: "Aditya Pratap Singh",
