@@ -5,9 +5,10 @@ import {
   Linkedin,
   Facebook,
   X,
-  Youtube,
+  Instagram, // add this
 } from "lucide-react";
-import logo from "../assets/logo.webp"; // Assuming you have a logo image
+import logo from "../assets/logo.webp";
+
 const Footer = () => {
   return (
     <div>
@@ -50,45 +51,34 @@ const Footer = () => {
 
         {/* Social Links */}
         <div className="flex gap-4 mt-2 md:mt-0">
-          <a href="#">
-            <Linkedin
-              className="text-white bg-blue-800 rounded-full p-1"
-              size={32}
-            />
+          <a href="https://www.linkedin.com/company/fila-fratello-pharmaceutical-pvt-ltd/" target="_blank" rel="noopener noreferrer">
+            <Linkedin className="text-white bg-blue-800 rounded-full p-1" size={32} />
           </a>
-          <a href="#">
-            <Facebook
-              className="text-white bg-blue-800 rounded-full p-1"
-              size={32}
-            />
+          <a href="https://www.facebook.com/share/17HxcB7sCC/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+            <Facebook className="text-white bg-blue-800 rounded-full p-1" size={32} />
           </a>
-          <a href="#">
-            <X className="text-white bg-blue-800 rounded-full p-1" size={32} />
+          <a href="https://www.instagram.com/filafratellopharmaceuticals" target="_blank" rel="noopener noreferrer">
+            <Instagram className="text-white bg-blue-800 rounded-full p-1" size={32} />
           </a>
-          <a href="#">
-            <Youtube
-              className="text-white bg-blue-800 rounded-full p-1"
-              size={32}
-            />
-          </a>
+         
         </div>
       </footer>
 
-     <div className="flex justify-center items-center bg-g ray-900 text- gray-300 py-4 text-sm">
-  <p className="text-center">
-    Designed & Developed by{" "}
-    <a
-      href="https://genforgestudio.com/"
-      title="Web & App Development by GenForge Studio"
-      className="text-indigo-400 font-medium hover:underline hover:text-indigo-300 transition-colors"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      GenForge Studio
-    </a>
-    {" "}— Global Web & App Development Agency
-  </p>
-</div>
+      <div className="flex justify-center items-center bg-gray-0 text-gr ay-300 py-4 text-sm">
+        <p className="text-center">
+          Designed & Developed by{" "}
+          <a
+            href="https://genforgestudio.com/"
+            title="Web & App Development by GenForge Studio"
+            className="text-indigo-400 font-medium hover:underline hover:text-indigo-300 transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GenForge Studio
+          </a>{" "}
+          — Global Web & App Development Agency
+        </p>
+      </div>
     </div>
   );
 };

@@ -4,6 +4,7 @@ import f3 from '../assets/f3.webp';   // Add actual image path
 import f4 from '../assets/f4.webp';   // Add actual image path
 import f5 from '../assets/f5.webp';   // Add actual image path
  import f7 from '../assets/xxs.webp';   // Add actual image path
+ import f8 from '../assets/f8.webp';   // Add actual image path
 
 const founders = [
   {
@@ -54,7 +55,14 @@ const founders = [
   titleColor: "text-blue-700",
   border: "border-blue-300",
   desc: `Aditya Pratap Singh spearheads business development with a focus on strategic partnerships, client acquisition, and market expansion. His deep understanding of customer needs and proactive approach has been instrumental in driving sustainable growth for the organization.`,
-}
+},
+  {
+  name: "Uttam Bhardwaj",
+  title: "Territory Sales Manager",
+  image: f8,
+  titleColor: "text-blue-700",
+  border: "border-blue-300",
+desc: `Uttam Bhardwaj drives regional sales growth through strong client relationships and strategic market initiatives. His leadership and deep industry knowledge consistently contribute to expanding market reach and achieving key business objectives.`,}
 
 ];
 
