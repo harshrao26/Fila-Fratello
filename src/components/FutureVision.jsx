@@ -1,38 +1,63 @@
+import { Leaf, FlaskConical, Globe } from 'lucide-react';
+
 const FutureVision = () => {
-    return (
-      <section className="bg-gradient-to-r from-white to-blue-50 py-16 px-4 sm:px-8 md:px-16">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl capitalized md:text-5xl font-semibold text-gray-800 mb-6 leading-snug">
-            Our Vision for the Future 🌐
+  const visions = [
+    {
+      title: "Sustainable Growth",
+      desc: "Building a future-ready pharma ecosystem with responsible practices, efficient supply chains, and environment-first strategies.",
+      icon: <Leaf className="w-6 h-6" />,
+      accent: "from-emerald-400 to-teal-500",
+      shadow: "shadow-emerald-500/10",
+    },
+    {
+      title: "R&D Leadership",
+      desc: "Investing in breakthrough research and development to deliver next-gen solutions in both generics and speciality healthcare.",
+      icon: <FlaskConical className="w-6 h-6" />,
+      accent: "from-blue-500 to-indigo-600",
+      shadow: "shadow-blue-500/10",
+    },
+    {
+      title: "Global Expansion",
+      desc: "Expanding our global footprint while upholding our commitment to quality, compliance, and accessible healthcare worldwide.",
+      icon: <Globe className="w-6 h-6" />,
+      accent: "from-indigo-500 to-purple-600",
+      shadow: "shadow-indigo-500/10",
+    },
+  ];
+
+  return (
+    <section className="bg-white py-24 px-6 md:px-12 overflow-hidden">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center max-w-3xl mx-auto mb-20 space-y-6">
+          <h2 className="text-4xl md:text-5xl font-semibold text-slate-900 leading-tight italic">
+            Vision for the <span className="text-blue-600 not-italic">Future</span>
           </h2>
-          <p className="text-gray-600 text-md md:text-lg mb-6">
-            At <strong>Fila Fratello Pharmaceutical Pvt. Ltd.</strong>, we envision a future where advanced science, compassionate care, and sustainable innovation converge to shape a healthier, more equitable world.
+          <p className="text-lg text-slate-500 font-normal leading-relaxed">
+            At <strong>Fila Fratello Pharmaceutical Pvt. Ltd.</strong>, we envision a future where advanced science, compassionate care, and sustainable innovation converge.
           </p>
-  
-          <div className="grid md:grid-cols-3 gap-8 text-left">
-            <div className="bg-white shadow-md rounded-xl p-6 border-t-4 border-blue-600">
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">🌱 Sustainable Growth</h3>
-              <p className="text-gray-600 text-sm">
-                Building a future-ready pharma ecosystem with responsible practices, efficient supply chains, and environment-first strategies.
-              </p>
-            </div>
-            <div className="bg-white shadow-md rounded-xl p-6 border-t-4 border-purple-600">
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">🔬 R&D Leadership</h3>
-              <p className="text-gray-600 text-sm">
-                Investing in breakthrough research and development to deliver next-gen solutions in both generics and speciality healthcare.
-              </p>
-            </div>
-            <div className="bg-white shadow-md rounded-xl p-6 border-t-4 border-red-500">
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">🌍 Global Expansion</h3>
-              <p className="text-gray-600 text-sm">
-                Expanding our global footprint while upholding our commitment to quality, compliance, and accessible healthcare worldwide.
-              </p>
-            </div>
-          </div>
         </div>
-      </section>
-    );
-  };
-  
-  export default FutureVision;
-  
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {visions.map((v, i) => (
+            <div
+              key={i}
+              className={`group relative p-10 bg-white rounded-[2.5rem] border border-slate-100 shadow-xl transition-all duration-500 hover:-translate-y-2 ${v.shadow}`}
+            >
+              <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${v.accent} flex items-center justify-center text-white mb-8 shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3`}>
+                {v.icon}
+              </div>
+              <h3 className="text-2xl font-semibold text-slate-900 mb-4 tracking-tight">
+                {v.title}
+              </h3>
+              <p className="text-slate-500 leading-relaxed font-normal">
+                {v.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default FutureVision;

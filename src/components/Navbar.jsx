@@ -1,105 +1,91 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet";
-import logo from "../assets/logo.webp";
-import PharmaInquiryForm from "./PharmaInquiryForm.jsx";
+"use client";
 
-const Header = () => {
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import logo from "../assets/logo.webp";
+
+const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [showModal, setShowModal] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 10);
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const navLinks = [
+    { name: "Home", href: "/" },
+    { name: "Our Products", href: "/products" },
+    { name: "Contact Us", href: "/contact" },
+  ];
+
   return (
-    <>
-      {/* SEO Meta Tags */}
-      <Helmet>
-        <title>Fila Fratello Pharmaceuticals | Innovating for Better Health</title>
-        <meta name="description" content="Fila Fratello is redefining pharmaceutical standards with science-driven, ethical healthcare solutions from India." />
-        <meta name="keywords" content="Fila Fratello, pharmaceutical company, Kanpur, Indian pharma, healthcare innovation, generic medicines" />
-        <meta property="og:title" content="Fila Fratello Pharmaceuticals | Innovating for Better Health" />
-        <meta property="og:description" content="Progressive Indian pharma company delivering global-quality healthcare through science and integrity." />
-        <meta property="og:url" content="https://www.filafratello.com" />
-        <meta property="og:type" content="website" />
-      </Helmet>
+    <header
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${isScrolled
+        ? "py-3 bg-white/80 backdrop-blur-lg border-b border-slate-200/50 shadow-sm"
+        : "py-5 bg-transparent"
+        }`}
+    >
+      <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
+        <Link href="/" className="flex items-center gap-3 transition-transform hover:scale-105" aria-label="Home">
+          <Image
+            src={logo}
+            alt="Fila Fratello Logo"
+            className={`transition-all duration-500 ${isScrolled ? "h-10 w-auto" : "h-14 w-auto"}`}
+            priority
+          />
+        </Link>
 
-      {/* Header */}
-      <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? "bg-white shadow" : "bg-transparent"}`}>
-        <div className="flex justify-between items-center px-4 md:px-6 py-3 border-t border-b border-gray-200">
-          <Link to="/" className="flex items-center gap-2" aria-label="Fila Fratello Pharmaceuticals Home">
-            <img src={logo} alt="Fila Fratello Pharmaceuticals Logo" className="h-12 md:h-16" />
-          </Link>
-
-          {/* Desktop Menu */}
-          <nav className="hidden md:flex gap-6 text-base font-medium text-gray-800">
-            <Link to="/" className="hover:text-blue-600 transition">Home</Link>
-            <Link to="/products" className="hover:text-blue-600 transition">Our Products</Link>
-            <button onClick={() => setShowModal(true)} className="hover:text-blue-600 transition">Contact Us</button>
-          </nav>
-
-          {/* Mobile Menu Toggle */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setMenuOpen(!menuOpen)}
-              className="text-3xl text-gray-700 focus:outline-none"
-              aria-label="Toggle menu"
+        {/* Desktop Menu */}
+        <nav className="hidden md:flex items-center gap-10">
+          {navLinks.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              className="text-sm font-semibold text-slate-700 hover:text-blue-600 transition-colors relative group py-2"
             >
-              ☰
-            </button>
-          </div>
-        </div>
+              {link.name}
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+            </Link>
+          ))}
+        </nav>
 
-        {/* Mobile Dropdown Menu */}
-        {menuOpen && (
-          <div className="md:hidden bg-white shadow px-4 py-3 text-gray-800 text-base font-medium space-y-2">
-            <Link to="/" onClick={() => setMenuOpen(false)} className="block hover:text-blue-600">Home</Link>
-            <Link to="/products" onClick={() => setMenuOpen(false)} className="block hover:text-blue-600">Our Products</Link>
-            <button onClick={() => { setMenuOpen(false); setShowModal(true); }} className="block hover:text-blue-600">Contact Us</button>
-          </div>
-        )}
-      </header>
+        {/* Mobile Toggle */}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="md:hidden p-2 text-slate-700 hover:bg-slate-100 rounded-lg transition-colors"
+          aria-label="Toggle menu"
+        >
+          {menuOpen ? (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
+          ) : (
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" /></svg>
+          )}
+        </button>
+      </div>
 
-      {/* Modal */}
-      {showModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 transition-opacity duration-300">
-          <div
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="modal-title"
-            className="relative bg-white w-full max-w-6xl p-6 rounded-xl shadow-lg transform transition-all duration-300 scale-100 opacity-100"
-            style={{ animation: "fadeScaleIn 0.3s ease-out" }}
-          >
-            <h2 id="modal-title" className="sr-only">Pharma Inquiry Form</h2>
-            <button
-              onClick={() => setShowModal(false)}
-              className="absolute top-3 right-4 text-gray-600 hover:text-red-600 text-4xl font-extralight"
-              aria-label="Close Contact Form"
+      {/* Mobile Menu */}
+      <div
+        className={`md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-xl border-b border-slate-200 transition-all duration-500 overflow-hidden ${menuOpen ? "max-h-[300px] opacity-100" : "max-h-0 opacity-0"
+          }`}
+      >
+        <div className="flex flex-col p-6 gap-4">
+          {navLinks.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              onClick={() => setMenuOpen(false)}
+              className="text-lg font-semibold text-slate-800 hover:text-blue-600 transition-colors"
             >
-              ×
-            </button>
-            <PharmaInquiryForm />
-          </div>
-          <style>{`
-            @keyframes fadeScaleIn {
-              0% {
-                opacity: 0;
-                transform: scale(0.95);
-              }
-              100% {
-                opacity: 1;
-                transform: scale(1);
-              }
-            }
-          `}</style>
+              {link.name}
+            </Link>
+          ))}
         </div>
-      )}
-    </>
+      </div>
+    </header>
   );
 };
 
-export default Header;
+export default Navbar;

@@ -1,0 +1,42 @@
+@import "tailwindcss";
+@source "../../src/**/*.{js,jsx,ts,tsx}";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a; /* Slate 900 */
+}
+
+@theme {
+  --font-sans: var(--font-outfit);
+}
+
+body {
+  font-family: var(--font-outfit), sans-serif;
+  color: var(--foreground);
+  background: var(--background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer base {
+  h1 {
+    @apply text-4xl md:text-6xl font-semibold text-slate-900 leading-[1.1];
+  }
+  h2 {
+    @apply text-3xl md:text-5xl font-semibold text-slate-900 leading-tight;
+  }
+  h3 {
+    @apply text-xl md:text-2xl font-semibold text-slate-900;
+  }
+  p {
+    @apply text-base text-slate-600 leading-relaxed;
+  }
+}
+
+.glass-morphism {
+  @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-xl;
+}
+
+.text-gradient {
+  @apply bg-gradient-to-r from-blue-600 to-indigo-500 bg-clip-text text-transparent;
+}

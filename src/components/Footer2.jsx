@@ -1,85 +1,109 @@
-import {
-  MapPin,
-  Phone,
-  Mail,
-  Linkedin,
-  Facebook,
-  X,
-  Instagram, // add this
-} from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
 import logo from "../assets/logo.webp";
+import { Mail, Phone, MapPin, Instagram, Linkedin, Globe } from "lucide-react";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <div>
-      <footer className="bg-white py-8 px-4 md:px-16 flex flex-col md:flex-row items-start justify-between gap-6 border-t">
-        {/* Logo Section */}
-        <div className="flex items-center gap-3">
-          <div className="">
-            <img src={logo} alt="Logo" className="w-12 h-12 rounded-full" />
-          </div>
-          <span className="text-blue-800 font-bold text-xl capitalize">
-            fila fratello pharmaceutical private limited
-          </span>
-        </div>
+    <footer className="bg-white pt-24 pb-12 px-6 md:px-12 border-t border-slate-100">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
 
-        {/* Address Section */}
-        <div className="flex items-start gap-2 max-w-xs">
-          <MapPin className="text-blue-700 mt-1" />
-          <div>
-            <p className="font-semibold">Registered Office:</p>
-            <p className="text-sm text-gray-700">
-              H-1/999, WORLD BANK, Barra, <br />
-              Kanpur Nagar, Barra, Uttar Pradesh, <br />
-              India, 208027
+          {/* Brand Column */}
+          <div className="space-y-8">
+            <Link href="/" className="inline-block transition-transform hover:scale-105">
+              <Image src={logo} alt="Fila Fratello Logo" className="h-16 w-auto" />
+            </Link>
+            <p className="text-slate-500 font-normal leading-relaxed text-sm">
+              Passionately advancing healthcare with science, ethics, and a global vision. Reimagining pharmaceutical excellence since 2025.
             </p>
-            <p className="text-sm text-gray-700">CIN: U12345UP2021PTC123456</p>
+            <div className="flex gap-4">
+              <a href="#" className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white transition-all shadow-sm">
+                <Instagram size={18} />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white transition-all shadow-sm">
+                <Linkedin size={18} />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white transition-all shadow-sm">
+                <Globe size={18} />
+              </a>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-slate-900 font-semibold mb-8">Navigation</h4>
+            <ul className="space-y-4">
+              {['Home', 'Our Products', 'About Us', 'Contact Us'].map((item) => (
+                <li key={item}>
+                  <Link
+                    href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`}
+                    className="text-slate-500 hover:text-blue-600 transition-colors text-sm font-normal"
+                  >
+                    {item}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div className="lg:col-span-2 space-y-8">
+            <h4 className="text-slate-900 font-semibold mb-8">Corporate Connect</h4>
+            <div className="grid sm:grid-cols-2 gap-8">
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center">
+                  <MapPin size={18} />
+                </div>
+                <div className="space-y-1">
+                  <span className="text-[10px] font-semibold text-slate-400 uppercase tracking-widest">Office</span>
+                  <p className="text-sm text-slate-600 font-normal leading-relaxed">
+                    H-1-892, H Block, Barra World Bank, Barra, Kanpur, UP 208027
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center">
+                  <Phone size={18} />
+                </div>
+                <div className="space-y-1">
+                  <span className="text-[10px] font-semibold text-slate-400 uppercase tracking-widest">Phone</span>
+                  <p className="text-sm text-slate-600 font-normal">
+                    +91-8173041920
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4 sm:col-span-2">
+                <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
+                  <Mail size={18} />
+                </div>
+                <div className="space-y-1">
+                  <span className="text-[10px] font-semibold text-slate-400 uppercase tracking-widest">Email</span>
+                  <p className="text-sm text-slate-600 font-normal">
+                    Filafratellopharmaceutical@gmail.com
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Contact Info */}
-        <div className="flex flex-col gap-2">
-          <div className="flex items-center gap-2">
-            <Phone className="text-blue-700" size={18} />
-            <span>+91 63967 87418</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <Mail className="text-blue-700" size={18} />
-            <span> filafratello@gmail.com</span>
-          </div>
+        {/* Bottom Bar */}
+        <div className="pt-12 border-t border-slate-100 flex flex-col items-center justify-center gap-4 text-center">
+          <p className="text-xs text-slate-400 font-normal">
+            © {currentYear} Fila Fratello Pharmaceutical Pvt. Ltd. All Rights Reserved.
+          </p>
+          <p className="text-xs text-slate-400 font-normal flex items-center gap-2">
+            Designed with excellence by
+            <a href="https://genforgestudio.com/" className="text-blue-600 font-semibold hover:underline">GenForge Studio</a>
+          </p>
         </div>
-
-        {/* Social Links */}
-        <div className="flex gap-4 mt-2 md:mt-0">
-          <a href="https://www.linkedin.com/company/fila-fratello-pharmaceutical-pvt-ltd/" target="_blank" rel="noopener noreferrer">
-            <Linkedin className="text-white bg-blue-800 rounded-full p-1" size={32} />
-          </a>
-          <a href="https://www.facebook.com/share/17HxcB7sCC/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
-            <Facebook className="text-white bg-blue-800 rounded-full p-1" size={32} />
-          </a>
-          <a href="https://www.instagram.com/filafratellopharmaceuticals" target="_blank" rel="noopener noreferrer">
-            <Instagram className="text-white bg-blue-800 rounded-full p-1" size={32} />
-          </a>
-         
-        </div>
-      </footer>
-
-      <div className="flex justify-center items-center bg-gray-0 text-gr ay-300 py-4 text-sm">
-        <p className="text-center">
-          Designed & Developed by{" "}
-          <a
-            href="https://genforgestudio.com/"
-            title="Web & App Development by GenForge Studio"
-            className="text-indigo-400 font-medium hover:underline hover:text-indigo-300 transition-colors"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GenForge Studio
-          </a>{" "}
-          — Global Web & App Development Agency
-        </p>
       </div>
-    </div>
+    </footer>
   );
 };
 
