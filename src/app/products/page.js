@@ -49,7 +49,7 @@ export default async function ProductsPage() {
                     src={product.image}
                     alt={product.name}
                     fill
-                    className="object-contain p-10 transition-transform duration-700 group-hover:scale-110"
+                    className="object-contain p -10 transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute top-4 left-4">
                     <span className="px-3 py-1 bg-white/80 backdrop-blur-md text-[10px] font-semibold text-blue-600 rounded-full border border-blue-100 shadow-sm">

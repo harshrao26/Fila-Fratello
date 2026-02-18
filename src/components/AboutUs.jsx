@@ -41,7 +41,7 @@ const AboutUs = () => {
             </div>
 
             <div className="p-8 bg-blue-600 rounded-[2rem] text-white shadow-xl shadow-blue-500/20">
-              <p className="text-xl font-semibold leading-relaxed mb-4">
+              <p className="text-xl text-white font-semibold leading-relaxed mb-4">
                 "Passionately advancing healthcare with science, ethics, and a global vision."
               </p>
               <div className="h-0.5 w-12 bg-white/30 rounded-full"></div>
