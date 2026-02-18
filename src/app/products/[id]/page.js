@@ -28,7 +28,7 @@ export default async function ProductDetailPage({ params }) {
     <main className="min-h-screen bg-white pt-32 pb-24 px-6 md:px-12">
       <div className="max-w-7xl mx-auto">
         {/* Modern Breadcrumbs */}
-        <nav className="flex items-center gap-4 text-sm font-semibold text-slate-400 mb-16">
+        <nav className="flex items-center gap-4 text-sm font-semibold text-slate-400 mb-8">
           <Link href="/products" className="hover:text-blue-600 transition-colors flex items-center gap-1">
             <ChevronLeft size={16} />
             Back to Catalog
@@ -38,9 +38,9 @@ export default async function ProductDetailPage({ params }) {
         </nav>
 
         {/* Product Hero Section */}
-        <div className="grid lg:grid-cols-2 gap-12 md:gap-24 items-start mb-32">
+        <div className="grid lg:grid-cols-2 gap-12 md:gap-24 items-start -32">
           {/* Gallery - Left */}
-          <div className="sticky top-32">
+          <div className="  top32">
             <ProductGallery
               images={product.images}
               primaryImage={product.image}
@@ -54,7 +54,7 @@ export default async function ProductDetailPage({ params }) {
               <span className="inline-flex px-4 py-1.5 bg-blue-50 text-blue-600 text-xs font-semibold rounded-full border border-blue-100">
                 {product.category}
               </span>
-              <h1 className="text-4xl md:text-6xl font-semibold text-slate-900 tracking-tight leading-tight">
+              <h1 className="text-3xl md:text-4xl font-semibold text-slate-900 tracking-tight leading-tight">
                 {product.name}
               </h1>
               <p className="text-xl text-slate-500 font-normal leading-relaxed">

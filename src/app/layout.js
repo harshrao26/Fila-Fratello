@@ -22,12 +22,19 @@ export const metadata = {
     description:
       "Fila Fratello stands as a non-government company limited by shares, aiming to redefine industry standards in healthcare through science-backed formulations and ethical practices.",
   },
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/favicon.ico",
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${outfit.variable} antialiased font-sans text-slate-900`}>
+      <body
+        className={`${outfit.variable} antialiased font-sans text-slate-900`}
+      >
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
