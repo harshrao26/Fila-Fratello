@@ -72,7 +72,7 @@ const Footer = () => {
                 <div className="space-y-1">
                   <span className="text-[10px] font-semibold text-slate-400 uppercase tracking-widest">Phone</span>
                   <p className="text-sm text-slate-600 font-normal">
-                    +91-8173041920
+                    +91-6396787418
                   </p>
                 </div>
               </div>
