@@ -6,6 +6,8 @@ import Product from "../../../models/Product";
 import { notFound } from "next/navigation";
 import ProductGallery from "../../../components/ProductGallery";
 
+export const dynamic = "force-dynamic";
+
 async function getProduct(id) {
   await connectToDatabase();
   try {

@@ -9,6 +9,8 @@ export const metadata = {
     "Explore our range of high-quality pharmaceutical products, from tablets to syrups, designed for better health.",
 };
 
+export const dynamic = "force-dynamic";
+
 async function getProducts() {
   await connectToDatabase();
   return JSON.parse(
